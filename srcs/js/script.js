@@ -6,25 +6,61 @@
 /*   By: madmax42 <madmax42@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/16 14:48:10 by madmax42          #+#    #+#             */
-/*   Updated: 2023/04/16 17:02:13 by madmax42         ###   ########.fr       */
+/*   Updated: 2023/04/16 19:23:36 by madmax42         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Selects the appropriate HTML elements
+// Get the elements from the DOM
 const textInput = document.getElementById('text-input');
 const outputText = document.getElementById('output-text-after');
 // Add click events to the buttons
 const btnEncrypt = document.getElementById('btnEncrypt');
 const btnDecrypt = document.getElementById('btnDecrypt');
 
-btnEncrypt.addEventListener('click', () => {
-	const encryptedText = encrypt(textInput.value);
-	outputText.textContent = `After the encoder: ${encryptedText}`;
+function validateInput(str)
+{
+    const normalizedStr = str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    return /^[a-z\s]+$/.test(normalizedStr);
+}
+
+btnEncrypt.addEventListener('click', () =>
+{
+    if(/[A-Z]/.test(textInput.value))
+	{
+        alert('The input should not contain uppercase letters');
+        return;
+    }
+    const textToEncrypt =
+			textInput.value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+    if (!validateInput(textToEncrypt))
+	{
+        alert('Only lowercase letters and no accent!');
+        return;
+    }
+	const encryptedText = encrypt(textToEncrypt);
+	outputText.textContent = `${encryptedText}`;
+	const alertTitle = document.getElementById('alert-title');
+	const alertMsg = document.getElementById('alert-msg');
+	alertTitle.style.display = 'none';
+	alertMsg.style.display = 'none';
 });
 
-btnDecrypt.addEventListener('click', () => {
-	const decryptedText = decrypt(textInput.value);
-	outputText.textContent = `After the decoder: ${decryptedText}`;
+btnDecrypt.addEventListener('click', () =>
+{
+    if(/[A-Z]/.test(textInput.value))
+	{
+        alert('The input should not contain uppercase letters');
+        return;
+    }
+	const textToDecrypt =
+			textInput.value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+	const decryptedText = decrypt(textToDecrypt);
+	outputText.textContent = `${decryptedText}`;
+
+	const alertTitle = document.getElementById('alert-title');
+	const alertMsg = document.getElementById('alert-msg');
+	alertTitle.style.display = 'none';
+	alertMsg.style.display = 'none';
 });
 
 // Encryption and decryption functions
