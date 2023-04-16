@@ -6,7 +6,7 @@
 /*   By: madmax42 <madmax42@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/16 00:13:25 by madmax42          #+#    #+#             */
-/*   Updated: 2023/04/16 20:10:56 by madmax42         ###   ########.fr       */
+/*   Updated: 2023/04/16 20:37:19 by madmax42         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,15 @@ header
 	justify-content: space-between;
 }
 
-.logo {
+.logo
+{
 	width: auto;
 	height: auto;
 }
 
 /* input area */
-.input-text {
+.input-text
+{
 	background-color: transparent;
 	padding: 20px;
 	display: flex;
@@ -41,7 +43,8 @@ header
 	align-items: center;
 }
 
-#text-input {
+#text-input
+{
 	width: 100%;
 	padding: 10px;
 	margin-bottom: 10px;
@@ -49,31 +52,35 @@ header
 	border-radius: 5px;
 	background-color: #e5e5e5;
 	color: red;
-	font-size: 16px;
+	font-size: 20px;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	outline: none;
 }
 
-#text-input::placeholder {
+#text-input::placeholder
+{
 	color: blue;
 	font-size: 22px;
 }
 
 /* icon alert*/
-.input-text img {
+.input-text img
+{
 	width: auto;
 	margin-bottom: 5px;
 }
 
 /* section buttons */
-.buttons {
+.buttons
+{
 	display: flex;
 	justify-content: center;
 	margin: 20px 0;
 }
 
 /* button encoder */
-.encode {
+.encode
+{
 	padding: 10px 20px;
 	margin-right: 10px;
 	background-color: #0f0;
@@ -86,7 +93,8 @@ header
 }
 
 /* button decoder */
-.decode {
+.decode
+{
 	padding: 10px 20px;
 	margin-left: 10px;
 	background-color: #f00;
@@ -99,14 +107,16 @@ header
 }
 
 /* output area */
-.output-text {
+.output-text
+{
 	background-color: #222;
 	padding: 20px;
 	display: flex;
 	align-items: center;
 }
 
-.output-text p {
+.output-text p
+{
 	color: #fff;
 	font-size: 16px;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -116,7 +126,8 @@ header
 	margin-right: 20px;
 }
 
-.output-text img {
+.output-text img
+{
 	background-color: #e5e5e5;
 	border-radius: 10px;
 	flex: 1;
@@ -124,20 +135,23 @@ header
 	height: auto;
 }
 
-#output-text-after {
+#output-text-after
+{
     color: lawngreen;
     font-size: 22px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin-right: 20px;
 }
 
-.muneco {
+.muneco
+{
     background-color: #e5e5e5;
     border-radius: 10px;
 	margin-left: auto;
 }
 
-.output-area {
+.output-area
+{
 	width: 100%;
 	height: auto;
 	padding: 10px;
@@ -151,25 +165,29 @@ header
 }
 
 /* img muneco */
-.output-text img {
+.output-text img
+{
 	width: auto;
 }
 
-.title-alert {
+.title-alert
+{
 	font-size: 22px;
 	font-weight: 400;
 	color: red;
 	margin-left: 30px;
 }
 
-.msg-alert {
+.msg-alert
+{
 	margin-top: 10px;
 	font-size: 12px;
 }
 
 /* footer */
 
-.madmax42-footer {
+.madmax42-footer
+{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -179,29 +197,20 @@ header
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.img-footer1 {
+.img-footer1
+{
 	width: 300px;
 	height: auto;
 }
 
-.img-footer2 {
+.img-footer2
+{
 	width: 72px;
 	height: auto;
 }
 
-.img-footer3 {
+.img-footer3
+{
 	width: 72px;
 	height: auto;
-}
-
-/* Estilo para o botão de cópia */
-.copy {
-	padding: 10px 20px;
-	background-color: #00f;
-	border: none;
-	border-radius: 5px;
-	color: #fff;
-	font-size: 16px;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	cursor: pointer;
 }

@@ -6,7 +6,7 @@
 /*   By: madmax42 <madmax42@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/16 14:48:10 by madmax42          #+#    #+#             */
-/*   Updated: 2023/04/16 19:23:36 by madmax42         ###   ########.fr       */
+/*   Updated: 2023/04/16 20:35:47 by madmax42         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,25 @@ btnEncrypt.addEventListener('click', () =>
 	const alertMsg = document.getElementById('alert-msg');
 	alertTitle.style.display = 'none';
 	alertMsg.style.display = 'none';
+
+	// Check if copy button already exists
+	let copyButton = document.getElementById('copy-button');
+	if (!copyButton) {
+		copyButton = document.createElement('button');
+		copyButton.id = 'copy-button';
+		copyButton.textContent = 'Copy';
+		copyButton.style.backgroundColor = 'blue';
+		copyButton.style.color = 'white';
+		copyButton.style.borderRadius = '5px';
+		copyButton.style.padding = '10px';
+		copyButton.style.marginLeft = '10px';
+		copyButton.style.marginTop = '10px';
+		copyButton.addEventListener('click', () => {
+			navigator.clipboard.writeText(encryptedText);
+			alert('Encrypted text copied to clipboard!');
+		});
+		outputText.insertAdjacentElement('afterend', copyButton);
+	}
 });
 
 btnDecrypt.addEventListener('click', () =>
@@ -61,6 +80,25 @@ btnDecrypt.addEventListener('click', () =>
 	const alertMsg = document.getElementById('alert-msg');
 	alertTitle.style.display = 'none';
 	alertMsg.style.display = 'none';
+
+	// Check if copy button already exists
+	let copyButton = document.getElementById('copy-button');
+	if (!copyButton) {
+		copyButton = document.createElement('button');
+		copyButton.id = 'copy-button';
+		copyButton.textContent = 'Copy';
+		copyButton.style.backgroundColor = 'blue';
+		copyButton.style.color = 'white';
+		copyButton.style.borderRadius = '5px';
+		copyButton.style.padding = '10px';
+		copyButton.style.marginLeft = '10px';
+		copyButton.style.marginTop = '10px';
+		copyButton.addEventListener('click', () => {
+			navigator.clipboard.writeText(decryptedText);
+			alert('Decrypted text copied to clipboard!');
+		});
+		outputText.insertAdjacentElement('afterend', copyButton);
+	}
 });
 
 // Encryption and decryption functions
