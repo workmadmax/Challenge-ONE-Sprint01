@@ -4,28 +4,29 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="./css/reset.css">
+		<link rel="stylesheet" href="./css/style.css">
 		<title>Challenge ONE Text Decoder</title>
 	</head>
 	<body>
 		<header>
-			<div class="title-logo">
-				<img src="./imgs/logo.svg" alt="logo">
-			</div>
+				<img class="logo" src="./imgs/logo.svg" alt="logo">
 		</header>
 		<main>
 			<section class="input-text">
-				<textarea name="text" ></textarea>
-				<img src="./imgs/exclamacion.svg" alt="exclamacion">
+				<textarea id="text-input" name="text" placeholder="Enter yout Text..." ></textarea>
+				<img class="alert" src="./imgs/exclamacion.svg" alt="exclamacion">
+				<p>Only lowercase letter and no accent!</p>
 			</section>
 			<section class="buttons">
-				<button class="encode" onclick="btnEncoder()">Enconde</button>
-				<button class="decode" onclick="btnDecoder()">Decode</button>
+				<button id="btnEncrypt" class="encode" >Enconder</button>
+				<button id="btnDecrypt" class="decode" >Decoder</button>
 			</section>
 			<section class="output-text">
-				<textarea name="text" ></textarea>
-				<img src="./imgs/muneco.svg" alt="muneco">
-				<button class="copy" onclick="copyText()">Copy</button>
+				<p id="output-text-after">After the encoder:</p>
+				<img class="muneco" src="./imgs/muneco.svg" alt="muneco">
 			</section>
 		</main>
+		<script src="./js/script.js"></script>
 	</body>
 </html>

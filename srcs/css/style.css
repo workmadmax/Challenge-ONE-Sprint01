@@ -6,7 +6,151 @@
 /*   By: madmax42 <madmax42@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/16 00:13:25 by madmax42          #+#    #+#             */
-/*   Updated: 2023/04/16 00:13:26 by madmax42         ###   ########.fr       */
+/*   Updated: 2023/04/16 16:19:34 by madmax42         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+body
+{
+	display: block;
+	justify-content: space-around;
+	align-items: center;
+	background-color: #e5e5e5;
+	font-family: 'Courier New', Courier, monospace;
+}
+
+/* Estilo para o header */
+header
+{
+	padding: 20px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.logo
+{
+	width: auto;
+	height: auto;
+}
+
+/* Estilo para a seção de entrada de texto */
+.input-text
+{
+	background-color: transparent;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#text-input
+{
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 10px;
+	border: none;
+	border-radius: 5px;
+	background-color: #e5e5e5;
+	color: red;
+	font-size: 16px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	outline: none;
+}
+
+#text-input::placeholder
+{
+	color: blue;
+	font-size: 22px;
+}
+
+/* Estilo para o ícone de alerta na seção de entrada de texto */
+.input-text img
+{
+	width: auto;
+	margin-bottom: 5px;
+}
+
+/* Estilo para a seção de botões */
+.buttons
+{
+	display: flex;
+	justify-content: center;
+	margin: 20px 0;
+}
+
+/* Estilo para o botão de codificar */
+.encode
+{
+	padding: 10px 20px;
+	margin-right: 10px;
+	background-color: #0f0;
+	border: none;
+	border-radius: 5px;
+	color: #fff;
+	font-size: 16px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	cursor: pointer;
+}
+
+/* Estilo para o botão de decodificar */
+.decode
+{
+	padding: 10px 20px;
+	margin-left: 10px;
+	background-color: #f00;
+	border: none;
+	border-radius: 5px;
+	color: #fff;
+	font-size: 16px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	cursor: pointer;
+}
+
+/* Estilo para a seção de saída de texto */
+.output-text
+{
+	background-color: #222;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+
+.output-text img
+{
+	background-color: #e5e5e5;
+	border-radius: 10px;
+}
+
+.output-area
+{
+	width: 100%;
+	height: 100px;
+	padding: 10px;
+	margin-bottom: 10px;
+	border: none;
+	border-radius: 5px;
+	background-color: #e5e5e5;
+	color: green;
+	font-size: 16px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Estilo para o ícone de boneco na seção de saída de texto */
+.output-text img
+{
+	width: auto;
+}
+
+/* Estilo para o botão de cópia */
+.copy
+{
+	padding: 10px 20px;
+	background-color: #00f;
+	border: none;
+	border-radius: 5px;
+	color: #fff;
+	font-size: 16px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	cursor: pointer;
+}
